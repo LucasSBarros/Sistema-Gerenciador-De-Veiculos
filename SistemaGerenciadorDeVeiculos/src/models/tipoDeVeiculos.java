@@ -1,14 +1,19 @@
 package models;
 
 public class tipoDeVeiculos extends Veiculos {
-	
+
 	private String categoria;
 	private String descricao;
-	
-	public tipoDeVeiculos(String marca, String modelo, int ano, String placa, double preco, String categoria, String descricao) {
+	private int id;
+	private static int contador;
+
+	public tipoDeVeiculos(String marca, String modelo, int ano, String placa, double preco, String categoria,
+			String descricao) {
 		super(marca, modelo, ano, placa, preco);
 		this.categoria = categoria;
 		this.descricao = descricao;
+		this.contador = contador;
+		this.id = contador;
 	}
 
 	public String getCategoria() {
@@ -27,6 +32,33 @@ public class tipoDeVeiculos extends Veiculos {
 		this.descricao = descricao;
 	}
 
-	
-	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public static int getContador() {
+		return contador;
+	}
+
+	public static void setContador(int contador) {
+		tipoDeVeiculos.contador = contador;
+	}
+
+	@Override
+	public String toString() {
+		return "ID do Veículo: " + getId() + 
+				"\nMarca: " + getMarca() + 
+				"\nModelo: " + getModelo() + 
+				"\nAno: " + getAno() + 
+				"\nPlaca" + getPlaca() + 
+				"\nPreço: " + getPreco() + 
+				"\nCategoria: " + getCategoria()
+				+ "\nDescricao: " + getDescricao() + 
+				"] \n";
+	}
+
 }

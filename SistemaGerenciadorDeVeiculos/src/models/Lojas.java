@@ -1,23 +1,27 @@
 package models;
 
 public class Lojas {
-	
+
 	private String nome;
-	private String endereço;
+	private String endereco;
 	private String telefone;
-	
-	public Lojas(String nome, String endereço, String telefone) {
+	private int id;
+	private static int contador;
+
+	public Lojas(String nome, String endereco, String telefone) {
 		this.nome = nome;
-		this.endereço = endereço;
+		this.endereco = endereco;
 		this.telefone = telefone;
+		this.contador = contador;
+		this.id = contador;
 	}
 
 	public String getNome() {
 		return nome;
 	}
 
-	public String getEndereço() {
-		return endereço;
+	public String getEndereco() {
+		return endereco;
 	}
 
 	public String getTelefone() {
@@ -28,12 +32,37 @@ public class Lojas {
 		this.nome = nome;
 	}
 
-	public void setEndereço(String endereço) {
-		this.endereço = endereço;
+	public void setEndereco(String endereço) {
+		this.endereco = endereço;
 	}
 
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
-	
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public static int getContador() {
+		return contador;
+	}
+
+	public static void setContador(int contador) {
+		Lojas.contador = contador;
+	}
+
+	@Override
+	public String toString() {
+		return "ID da Loja: " + getId() + 
+				"\nNome:  " + getNome() + 
+				"\nEndereço: " + getEndereco() + 
+				"\nTelefone: " + getTelefone() + 
+				"] \n";
+	}
+
 }

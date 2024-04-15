@@ -1,0 +1,29 @@
+package controller;
+
+public class ControladorVenda implements CBAE {
+
+	@Override
+	public void cadastrar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void buscar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void alterar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void excluir() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

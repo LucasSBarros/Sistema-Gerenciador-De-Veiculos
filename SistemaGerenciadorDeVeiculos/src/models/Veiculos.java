@@ -1,13 +1,13 @@
 package models;
 
 public class Veiculos {
-	
+
 	private String marca;
 	private String modelo;
 	private int ano;
 	private String placa;
 	private double preco;
-	
+
 	public Veiculos(String marca, String modelo, int ano, String placa, double preco) {
 		this.marca = marca;
 		this.modelo = modelo;

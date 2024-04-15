@@ -1,16 +1,16 @@
 package views;
 
 import java.util.Scanner;
-import controller.ContradorVenda;
+import controller.ControladorVenda;
 import controller.ControladorCliente;
 import controller.ControladorLoja;
 import controller.ControladorVeiculos;
 import controller.ControladorVendedor;
 
 public class Menu {
-	
-	ControladorCliente controladorCliente = new ControladorCliente ();
-	
+
+	ControladorCliente controladorCliente = new ControladorCliente();
+
 	public void interfaceUsuario() {
 
 		Scanner sc = new Scanner(System.in);
@@ -118,7 +118,7 @@ public class Menu {
 		} else if (opcao == 4) {
 
 			sc.nextLine();
-			
+
 			System.out.println("Digite uma das seguintes opções:\n" + "Opção 4a: Cadastrar Cliente\n"
 					+ "Opção 4b: Consultar Cliente por CPF\n" + "Opção 4c: Voltar para o menu superior\n");
 

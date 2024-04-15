@@ -1,26 +1,26 @@
 package models;
 
-public class Clientes extends Pessoa{
-	
+public class Clientes extends Pessoa {
+
 	private int id;
 	private static int contador;
 
 	public Clientes(String nome, String cpf, String telefone) {
 		super(nome, cpf, telefone);
-		contador++;
+		this.contador = contador;
 		this.id = contador;
 	}
 
 	public int getId() {
 		return id;
 	}
+	
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	public static int getContador() {
 		return contador;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public static void setContador(int contador) {
@@ -32,7 +32,8 @@ public class Clientes extends Pessoa{
 		return "ID do Cliente: " + getId() + 
 				"\nNome:  " + getNome() + 
 				"\nCPF: " + getCpf() + 
-				"\nTelefone: " + getTelefone() + "] \n";
+				"\nTelefone: " + getTelefone() + 
+				"] \n";
 	}
-		
+
 }
