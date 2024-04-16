@@ -1,13 +1,13 @@
 package models;
 
-public class tipoDeVeiculos extends Veiculos {
+public class TipoDeVeiculos extends Veiculos {
 
 	private String categoria;
 	private String descricao;
 	private int id;
 	private static int contador;
 
-	public tipoDeVeiculos(String marca, String modelo, int ano, String placa, double preco, String categoria,
+	public TipoDeVeiculos(String marca, String modelo, int ano, String placa, double preco, String categoria,
 			String descricao) {
 		super(marca, modelo, ano, placa, preco);
 		this.categoria = categoria;
@@ -45,7 +45,7 @@ public class tipoDeVeiculos extends Veiculos {
 	}
 
 	public static void setContador(int contador) {
-		tipoDeVeiculos.contador = contador;
+		TipoDeVeiculos.contador = contador;
 	}
 
 	@Override

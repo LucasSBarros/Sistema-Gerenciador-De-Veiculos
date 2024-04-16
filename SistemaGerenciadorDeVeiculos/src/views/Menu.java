@@ -10,6 +10,10 @@ import controller.ControladorVendedor;
 public class Menu {
 
 	ControladorCliente controladorCliente = new ControladorCliente();
+	ControladorVendedor controladorVendedor = new ControladorVendedor();
+	ControladorLoja controladorLoja = new ControladorLoja();
+	ControladorVeiculos controladorVeiculos = new ControladorVeiculos();
+	ControladorVenda controladorVenda = new ControladorVenda();
 
 	public void interfaceUsuario() {
 
@@ -57,7 +61,8 @@ public class Menu {
 
 			if (op.equals("1a")) {
 
-				// consultarVeiculoPlaca();
+				controladorVeiculos.buscar();
+				frenteDeLoja();
 
 			} else if (op.equals("1b")) {
 
@@ -80,7 +85,8 @@ public class Menu {
 
 			if (op.equals("2a")) {
 
-				// listarLojas();
+				controladorLoja.buscar();
+				frenteDeLoja();
 
 			} else if (op.equals("2b")) {
 
@@ -103,7 +109,8 @@ public class Menu {
 
 			if (op.equals("3a")) {
 
-				// consultarVendedorNome();
+				controladorVendedor.buscar();
+				frenteDeLoja();
 
 			} else if (op.equals("3b")) {
 
@@ -149,15 +156,21 @@ public class Menu {
 			sc.nextLine();
 
 			System.out.println("Digite uma das seguintes opções:\n" + "Opção 5a: Cadastrar venda\n"
-					+ "Opção 5b: Voltar para o menu superior\n");
+					+ "Opção 5b: Consultar Venda\n" + "Opção 5b: Voltar para o menu superior\n");
 
 			String op = sc.nextLine();
 
 			if (op.equals("5a")) {
 
-				// cadastrarVenda();
+				controladorVenda.cadastrar();
+				frenteDeLoja();
 
-			} else if (op.equals("5b")) {
+			}else if (op.equals("5b")) {
+				
+				controladorVenda.buscar();;
+				frenteDeLoja();
+				
+			}else if (op.equals("5c")) {
 
 				frenteDeLoja();
 
@@ -201,15 +214,18 @@ public class Menu {
 
 			if (op.equals("1a")) {
 
-				// cadastrarVeiculo();
+				controladorVeiculos.cadastrar();
+				manutencaoNoCadastro();
 
 			} else if (op.equals("1b")) {
 
-				// excluirVeiculo();
+				controladorVeiculos.excluir();
+				manutencaoNoCadastro();
 
 			} else if (op.equals("1c")) {
 
-				// alterarDadosVeiculo();
+				controladorVeiculos.alterar();
+				manutencaoNoCadastro();
 
 			} else if (op.equals("1d")) {
 
@@ -233,15 +249,18 @@ public class Menu {
 
 			if (op.equals("2a")) {
 
-				// cadastrarLoja();
+				controladorLoja.cadastrar();;
+				manutencaoNoCadastro();
 
 			} else if (op.equals("2b")) {
 
-				// excluirLoja();
+				controladorLoja.excluir();
+				manutencaoNoCadastro();
 
 			} else if (op.equals("2c")) {
 
-				// alterarDadosLoja();
+				controladorLoja.alterar();
+				manutencaoNoCadastro();
 
 			} else if (op.equals("2d")) {
 
@@ -265,15 +284,18 @@ public class Menu {
 
 			if (op.equals("3a")) {
 
-				// cadastrarVendedor();
+				controladorVendedor.cadastrar();
+				manutencaoNoCadastro();
 
 			} else if (op.equals("3b")) {
 
-				// excluirVendedor();
+				controladorVendedor.excluir();
+				manutencaoNoCadastro();
 
 			} else if (op.equals("3c")) {
 
-				// alterarDadosVendedor();
+				controladorVendedor.alterar();
+				manutencaoNoCadastro();
 
 			} else if (op.equals("3d")) {
 
@@ -326,23 +348,21 @@ public class Menu {
 
 			System.out.println(
 					"Digite uma das seguintes opções:\n" + "Opção 5a: Cadastrar Venda\n" + "Opção 5b: Excluir Venda\n"
-							+ "Opção 5c: Alterar dados da Venda\n" + "Opção 5d: Voltar para o menu superior\n");
+							+ "Opção 5c: Voltar para o menu superior\n");
 
 			String op = sc.nextLine();
 
 			if (op.equals("5a")) {
 
-				// cadastrarVenda();
+				controladorVenda.cadastrar();
+				manutencaoNoCadastro();
 
 			} else if (op.equals("5b")) {
 
-				// excluirVenda();
+				controladorVenda.excluir();
+				manutencaoNoCadastro();
 
 			} else if (op.equals("5c")) {
-
-				// alterarDadosVenda();
-
-			} else if (op.equals("5d")) {
 
 				manutencaoNoCadastro();
 

@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import models.tipoDeVeiculos;
+import models.TipoDeVeiculos;
 
 public class ControladorVeiculos implements CBAE {
 
-	private static List<tipoDeVeiculos> veiculo;
+	private static List<TipoDeVeiculos> veiculo;
 
 	public ControladorVeiculos() {
 		this.veiculo = new ArrayList<>();
@@ -37,9 +37,9 @@ public class ControladorVeiculos implements CBAE {
 		String categoria = sc.nextLine();
 		System.out.println("Digite uma descrição para o veículo: ");
 		String descricao = sc.nextLine();
-		tipoDeVeiculos.setContador(tipoDeVeiculos.getContador() + 1);
+		TipoDeVeiculos.setContador(TipoDeVeiculos.getContador() + 1);
 
-		veiculo.add(new tipoDeVeiculos(marca, modelo, ano, placa, preco, categoria, descricao));
+		veiculo.add(new TipoDeVeiculos(marca, modelo, ano, placa, preco, categoria, descricao));
 
 	}
 
@@ -79,7 +79,7 @@ public class ControladorVeiculos implements CBAE {
 		System.out.println("Altere uma descrição para o veículo: ");
 		String descricao = sc.nextLine();
 
-		veiculo.set(id, new tipoDeVeiculos(marca, modelo, ano, placa, preco, categoria, descricao));
+		veiculo.set(id, new TipoDeVeiculos(marca, modelo, ano, placa, preco, categoria, descricao));
 
 	}
 
@@ -89,7 +89,7 @@ public class ControladorVeiculos implements CBAE {
 		System.out.println("Digite a placa do veículo que deseje buscar: ");
 		String placa = sc.nextLine();
 
-		for (tipoDeVeiculos veiculo : veiculo) {
+		for (TipoDeVeiculos veiculo : veiculo) {
 
 			if (veiculo.getPlaca().equals(placa)) {
 				System.out.println(veiculo.toString());
@@ -97,6 +97,14 @@ public class ControladorVeiculos implements CBAE {
 
 		}
 
+	}
+	
+	public static List<TipoDeVeiculos> getVeiculo() {
+		return veiculo;
+	}
+	
+	public static void setVeiculo(List<TipoDeVeiculos> veiculo) {
+		ControladorVeiculos.veiculo = veiculo;
 	}
 
 }

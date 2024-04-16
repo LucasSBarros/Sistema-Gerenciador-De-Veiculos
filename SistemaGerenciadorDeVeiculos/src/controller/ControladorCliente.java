@@ -11,7 +11,7 @@ public class ControladorCliente implements CBAE {
 	private static List<Clientes> cliente;
 
 	public ControladorCliente() {
-		this.cliente = new ArrayList<>();
+		ControladorCliente.cliente = new ArrayList<>();
 	}
 
 	@Override
@@ -30,17 +30,24 @@ public class ControladorCliente implements CBAE {
 		cliente.add(new Clientes(nome, cpf, telefone));
 
 	}
-
+	
 	@Override
-	public void excluir() {
+	public void buscar() {
 
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Digite o ID do cliente que deseja excluir: ");
-		int id = sc.nextInt() - 1;
-		cliente.remove(id);
+		System.out.println("Digite o CPF do cliente que deseja buscar: ");
+		String cpf = sc.nextLine();
+
+		for (Clientes cliente : cliente) {
+
+			if (cliente.getCpf().equals(cpf)) {
+				System.out.println(cliente.toString());
+			}
+
+		}
 
 	}
-
+	
 	@Override
 	public void alterar() {
 
@@ -62,20 +69,22 @@ public class ControladorCliente implements CBAE {
 	}
 
 	@Override
-	public void buscar() {
+	public void excluir() {
 
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Digite o CPF do cliente que deseja buscar: ");
-		String cpf = sc.nextLine();
-
-		for (Clientes cliente : cliente) {
-
-			if (cliente.getCpf().equals(cpf)) {
-				System.out.println(cliente.toString());
-			}
-
-		}
+		System.out.println("Digite o ID do cliente que deseja excluir: ");
+		int id = sc.nextInt() - 1;
+		cliente.remove(id);
 
 	}
 
+	public static List<Clientes> getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(List<Clientes> cliente) {
+		ControladorCliente.cliente = cliente;
+	}
+	
+	
 }

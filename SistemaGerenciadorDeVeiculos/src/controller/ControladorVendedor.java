@@ -76,5 +76,13 @@ public class ControladorVendedor implements CBAE {
 		}
 
 	}
+	
+	public static List<Vendedores> getVendedor() {
+		return vendedor;
+	}
+	
+	public static void setVendedor(List<Vendedores> vendedor) {
+		ControladorVendedor.vendedor = vendedor;
+	}
 
 }

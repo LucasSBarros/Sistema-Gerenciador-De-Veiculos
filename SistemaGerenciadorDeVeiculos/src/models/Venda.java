@@ -3,51 +3,81 @@ package models;
 import java.text.SimpleDateFormat;
 
 public class Venda {
-	
-	private String veiculoVendido;
-	private String vendedorResponsavel;
-	private String clienteComprador;
+
+	private TipoDeVeiculos veiculoVendido;
+	private Vendedores vendedorResponsavel;
+	private Clientes clienteComprador;
 	private SimpleDateFormat dataDaVenda;
-	
-	public Venda(String veiculoVendido, String vendedorResponsavel, String clienteComprador,
-			SimpleDateFormat dataDaVenda) {
-		super();
+	private int id;
+	private static int contador;
+
+	public Venda(TipoDeVeiculos veiculoVendido, Vendedores vendedorResponsavel, Clientes clienteComprador, SimpleDateFormat dataDaVenda) {
 		this.veiculoVendido = veiculoVendido;
 		this.vendedorResponsavel = vendedorResponsavel;
 		this.clienteComprador = clienteComprador;
-		dataDaVenda = new SimpleDateFormat("[dd/MM/yyyy - HH:mm]");
+		this.dataDaVenda = dataDaVenda;
+		this.contador = contador;
+		this.id = contador;
 	}
 
-	public String getVeiculoVendido() {
+
+
+	public TipoDeVeiculos getVeiculoVendido() {
 		return veiculoVendido;
 	}
 
-	public String getVendedorResponsavel() {
+	public void setVeiculoVendido(TipoDeVeiculos veiculoVendido) {
+		this.veiculoVendido = veiculoVendido;
+	}
+
+	public Vendedores getVendedorResponsavel() {
 		return vendedorResponsavel;
 	}
 
-	public String getClienteComprador() {
+	public void setVendedorResponsavel(Vendedores vendedorResponsavel) {
+		this.vendedorResponsavel = vendedorResponsavel;
+	}
+
+	public Clientes getClienteComprador() {
 		return clienteComprador;
+	}
+
+	public void setClienteComprador(Clientes clienteComprador) {
+		this.clienteComprador = clienteComprador;
 	}
 
 	public SimpleDateFormat getDataDaVenda() {
 		return dataDaVenda;
 	}
 
-	public void setVeiculoVendido(String veiculoVendido) {
-		this.veiculoVendido = veiculoVendido;
-	}
-
-	public void setVendedorResponsavel(String vendedorResponsavel) {
-		this.vendedorResponsavel = vendedorResponsavel;
-	}
-
-	public void setClienteComprador(String clienteComprador) {
-		this.clienteComprador = clienteComprador;
-	}
-
 	public void setDataDaVenda(SimpleDateFormat dataDaVenda) {
 		this.dataDaVenda = dataDaVenda;
 	}
 
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public static int getContador() {
+		return contador;
+	}
+
+	public static void setContador(int contador) {
+		Venda.contador = contador;
+	}
+	
+	@Override
+	public String toString() {
+		return "ID da venda: " + getId() + 
+				"Veiculo Vendido:" + getVeiculoVendido() + 
+				"Vendedor Responsavel: " + getVendedorResponsavel() + 
+				"Cliente Comprador" + getClienteComprador() + 
+				"Data Da Venda" + getDataDaVenda() + 
+				"]";
+	}
+	
 }
