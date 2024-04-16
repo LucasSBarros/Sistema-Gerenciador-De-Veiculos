@@ -22,25 +22,23 @@ public class ControladorVeiculos implements CBAE {
 		System.out.println("Digite a marca do veículo: ");
 		String marca = sc.nextLine();
 		System.out.println("Digite o modelo do veículo: ");
-		String modelo = sc.nextLine();
-		sc.nextLine();
-		System.out.println("Digite o ano do veículo: ");
-		int ano = sc.nextInt();
-		sc.nextLine();
+		String modelo = sc.nextLine();	
 		System.out.println("Digite a placa do veículo: ");
 		String placa = sc.nextLine();
-		sc.nextLine();
+		System.out.println("Digite a categoria do veículo: ");
+		String categoria = sc.nextLine();
+		System.out.println("Digite o ano do veículo: ");
+		int ano = sc.nextInt();
 		System.out.println("Digite o preco do veículo: ");
 		double preco = sc.nextDouble();
 		sc.nextLine();
-		System.out.println("Digite a categoria do veículo: ");
-		String categoria = sc.nextLine();
 		System.out.println("Digite uma descrição para o veículo: ");
 		String descricao = sc.nextLine();
+		
 		TipoDeVeiculos.setContador(TipoDeVeiculos.getContador() + 1);
 
 		veiculo.add(new TipoDeVeiculos(marca, modelo, ano, placa, preco, categoria, descricao));
-
+		
 	}
 
 	@Override

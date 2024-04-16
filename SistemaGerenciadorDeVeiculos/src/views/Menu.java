@@ -70,7 +70,8 @@ public class Menu {
 
 			} else {
 
-				System.out.println("Opcao inválida!");
+				System.out.println("Opcao inválida!\n");
+				frenteDeLoja();
 
 			}
 
@@ -94,7 +95,8 @@ public class Menu {
 
 			} else {
 
-				System.out.println("Opcao inválida!");
+				System.out.println("Opcao inválida!\n");
+				frenteDeLoja();
 
 			}
 
@@ -118,7 +120,8 @@ public class Menu {
 
 			} else {
 
-				System.out.println("Opcao inválida!");
+				System.out.println("Opcao inválida!\n");
+				frenteDeLoja();
 
 			}
 
@@ -147,7 +150,8 @@ public class Menu {
 
 			} else {
 
-				System.out.println("Opcao inválida!");
+				System.out.println("Opcao inválida!\n");
+				frenteDeLoja();
 
 			}
 
@@ -156,7 +160,7 @@ public class Menu {
 			sc.nextLine();
 
 			System.out.println("Digite uma das seguintes opções:\n" + "Opção 5a: Cadastrar venda\n"
-					+ "Opção 5b: Consultar Venda\n" + "Opção 5b: Voltar para o menu superior\n");
+					+ "Opção 5b: Consultar Venda\n" + "Opção 5c: Voltar para o menu superior\n");
 
 			String op = sc.nextLine();
 
@@ -165,18 +169,19 @@ public class Menu {
 				controladorVenda.cadastrar();
 				frenteDeLoja();
 
-			}else if (op.equals("5b")) {
-				
-				controladorVenda.buscar();;
+			} else if (op.equals("5b")) {
+
+				controladorVenda.buscar();
 				frenteDeLoja();
-				
-			}else if (op.equals("5c")) {
+
+			} else if (op.equals("5c")) {
 
 				frenteDeLoja();
 
 			} else {
 
-				System.out.println("Opcao inválida!");
+				System.out.println("Opcao inválida!\n");
+				frenteDeLoja();
 
 			}
 
@@ -186,7 +191,8 @@ public class Menu {
 
 		} else {
 
-			System.out.println("Opcao inválida!");
+			System.out.println("Opcao inválida!\n");
+			frenteDeLoja();
 
 		}
 
@@ -233,7 +239,8 @@ public class Menu {
 
 			} else {
 
-				System.out.println("Opcao inválida!");
+				System.out.println("Opcao inválida!\n");
+				manutencaoNoCadastro();
 
 			}
 
@@ -249,7 +256,7 @@ public class Menu {
 
 			if (op.equals("2a")) {
 
-				controladorLoja.cadastrar();;
+				controladorLoja.cadastrar();
 				manutencaoNoCadastro();
 
 			} else if (op.equals("2b")) {
@@ -268,7 +275,8 @@ public class Menu {
 
 			} else {
 
-				System.out.println("Opcao inválida!");
+				System.out.println("Opcao inválida!\n");
+				manutencaoNoCadastro();
 
 			}
 
@@ -303,7 +311,8 @@ public class Menu {
 
 			} else {
 
-				System.out.println("Opcao inválida!");
+				System.out.println("Opcao inválida!\n");
+				manutencaoNoCadastro();
 
 			}
 
@@ -338,7 +347,8 @@ public class Menu {
 
 			} else {
 
-				System.out.println("Opcao inválida!");
+				System.out.println("Opcao inválida!\n");
+				manutencaoNoCadastro();
 
 			}
 
@@ -346,9 +356,8 @@ public class Menu {
 
 			sc.nextLine();
 
-			System.out.println(
-					"Digite uma das seguintes opções:\n" + "Opção 5a: Cadastrar Venda\n" + "Opção 5b: Excluir Venda\n"
-							+ "Opção 5c: Voltar para o menu superior\n");
+			System.out.println("Digite uma das seguintes opções:\n" + "Opção 5a: Cadastrar Venda\n"
+					+ "Opção 5b: Excluir Venda\n" + "Opção 5c: Voltar para o menu superior\n");
 
 			String op = sc.nextLine();
 
@@ -368,7 +377,8 @@ public class Menu {
 
 			} else {
 
-				System.out.println("Opcao inválida!");
+				System.out.println("Opcao inválida!\n");
+				manutencaoNoCadastro();
 
 			}
 
@@ -378,7 +388,8 @@ public class Menu {
 
 		} else {
 
-			System.out.println("Opcao inválida!");
+			System.out.println("Opcao inválida!\n");
+			manutencaoNoCadastro();
 
 		}
 

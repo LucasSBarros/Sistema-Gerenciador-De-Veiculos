@@ -58,11 +58,11 @@ public class Lojas {
 
 	@Override
 	public String toString() {
-		return "ID da Loja: " + getId() + 
-				"\nNome:  " + getNome() + 
+		return "\nID da Loja: " + getId() + 
+				"\nNome: " + getNome() + 
 				"\nEndereço: " + getEndereco() + 
 				"\nTelefone: " + getTelefone() + 
-				"] \n";
+				"]\n";
 	}
 
 }

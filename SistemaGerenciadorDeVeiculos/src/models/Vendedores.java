@@ -29,11 +29,11 @@ public class Vendedores extends Pessoa {
 
 	@Override
 	public String toString() {
-		return "ID do Vendedor" + getId() + 
-				"Nome: " + getNome() + 
-				"CPF: " + getCpf() + 
-				"Telefone: " + getTelefone() + 
-				"] \n";
+		return "\nID do Vendedor:" + getId() + 
+				"\nNome: " + getNome() + 
+				"\nCPF: " + getCpf() + 
+				"\nTelefone: " + getTelefone() + 
+				"]\n";
 	}
 	
 }

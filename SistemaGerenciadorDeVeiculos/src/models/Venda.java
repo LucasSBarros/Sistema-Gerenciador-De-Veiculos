@@ -7,11 +7,11 @@ public class Venda {
 	private TipoDeVeiculos veiculoVendido;
 	private Vendedores vendedorResponsavel;
 	private Clientes clienteComprador;
-	private SimpleDateFormat dataDaVenda;
+	private String dataDaVenda;
 	private int id;
 	private static int contador;
 
-	public Venda(TipoDeVeiculos veiculoVendido, Vendedores vendedorResponsavel, Clientes clienteComprador, SimpleDateFormat dataDaVenda) {
+	public Venda(TipoDeVeiculos veiculoVendido, Vendedores vendedorResponsavel, Clientes clienteComprador, String dataDaVenda) {
 		this.veiculoVendido = veiculoVendido;
 		this.vendedorResponsavel = vendedorResponsavel;
 		this.clienteComprador = clienteComprador;
@@ -19,7 +19,6 @@ public class Venda {
 		this.contador = contador;
 		this.id = contador;
 	}
-
 
 
 	public TipoDeVeiculos getVeiculoVendido() {
@@ -46,11 +45,11 @@ public class Venda {
 		this.clienteComprador = clienteComprador;
 	}
 
-	public SimpleDateFormat getDataDaVenda() {
+	public String getDataDaVenda() {
 		return dataDaVenda;
 	}
 
-	public void setDataDaVenda(SimpleDateFormat dataDaVenda) {
+	public void setDataDaVenda(String dataDaVenda) {
 		this.dataDaVenda = dataDaVenda;
 	}
 
@@ -72,12 +71,12 @@ public class Venda {
 	
 	@Override
 	public String toString() {
-		return "ID da venda: " + getId() + 
-				"Veiculo Vendido:" + getVeiculoVendido() + 
-				"Vendedor Responsavel: " + getVendedorResponsavel() + 
-				"Cliente Comprador" + getClienteComprador() + 
-				"Data Da Venda" + getDataDaVenda() + 
-				"]";
+		return "\nID da venda: " + getId() + 
+				"\nVeiculo Vendido: " + getVeiculoVendido() + 
+				"\nVendedor Responsavel: " + getVendedorResponsavel() + 
+				"\nCliente Comprador: " + getClienteComprador() + 
+				"\nData Da Venda: " + getDataDaVenda() + 
+				"]\n";
 	}
 	
 }

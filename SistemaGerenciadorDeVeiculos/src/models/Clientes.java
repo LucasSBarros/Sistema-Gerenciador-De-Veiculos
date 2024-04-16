@@ -29,7 +29,7 @@ public class Clientes extends Pessoa {
 
 	@Override
 	public String toString() {
-		return "ID do Cliente: " + getId() + 
+		return "\nID do Cliente: " + getId() + 
 				"\nNome:  " + getNome() + 
 				"\nCPF: " + getCpf() + 
 				"\nTelefone: " + getTelefone() + 

@@ -50,15 +50,15 @@ public class TipoDeVeiculos extends Veiculos {
 
 	@Override
 	public String toString() {
-		return "ID do Veículo: " + getId() + 
+		return "\nID do Veículo: " + getId() + 
 				"\nMarca: " + getMarca() + 
 				"\nModelo: " + getModelo() + 
 				"\nAno: " + getAno() + 
-				"\nPlaca" + getPlaca() + 
+				"\nPlaca: " + getPlaca() + 
 				"\nPreço: " + getPreco() + 
-				"\nCategoria: " + getCategoria()
-				+ "\nDescricao: " + getDescricao() + 
-				"] \n";
+				"\nCategoria: " + getCategoria() + 
+				"\nDescricao: " + getDescricao() + 
+				"]\n";
 	}
 
 }
