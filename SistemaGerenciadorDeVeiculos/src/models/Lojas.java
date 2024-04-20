@@ -62,7 +62,7 @@ public class Lojas {
 				"\nNome: " + getNome() + 
 				"\nEndereço: " + getEndereco() + 
 				"\nTelefone: " + getTelefone() + 
-				"]\n";
+				"\n";
 	}
 
 }

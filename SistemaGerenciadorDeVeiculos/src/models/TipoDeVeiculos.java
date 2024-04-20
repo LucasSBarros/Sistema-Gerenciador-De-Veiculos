@@ -58,7 +58,7 @@ public class TipoDeVeiculos extends Veiculos {
 				"\nPreço: " + getPreco() + 
 				"\nCategoria: " + getCategoria() + 
 				"\nDescricao: " + getDescricao() + 
-				"]\n";
+				"\n";
 	}
 
 }

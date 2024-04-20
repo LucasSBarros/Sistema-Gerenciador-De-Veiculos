@@ -54,17 +54,17 @@ public class Menu {
 
 			sc.nextLine();
 
-			System.out.println("Digite uma das seguintes opções:\n" + "Opção 1a: Consultar Veículo por Placa\n"
-					+ "Opção 1b: Voltar para o menu superior\n");
+			System.out.println("Digite uma das seguintes opções:\n" + "Opção a: Consultar Veículo por Placa\n"
+					+ "Opção b: Voltar para o menu superior\n");
 
 			String op = sc.nextLine();
 
-			if (op.equals("1a")) {
+			if (op.equalsIgnoreCase("a")) {
 
 				controladorVeiculos.buscar();
 				frenteDeLoja();
 
-			} else if (op.equals("1b")) {
+			} else if (op.equalsIgnoreCase("b")) {
 
 				frenteDeLoja();
 
@@ -79,17 +79,17 @@ public class Menu {
 
 			sc.nextLine();
 
-			System.out.println("Digite uma das seguintes opções:\n" + "Opção 2a: Listar todas as Lojas\n"
-					+ "Opção 2b: Voltar para o menu superior\n");
+			System.out.println("Digite uma das seguintes opções:\n" + "Opção a: Listar todas as Lojas\n"
+					+ "Opção b: Voltar para o menu superior\n");
 
 			String op = sc.nextLine();
 
-			if (op.equals("2a")) {
+			if (op.equalsIgnoreCase("a")) {
 
 				controladorLoja.buscar();
 				frenteDeLoja();
 
-			} else if (op.equals("2b")) {
+			} else if (op.equalsIgnoreCase("b")) {
 
 				frenteDeLoja();
 
@@ -104,17 +104,17 @@ public class Menu {
 
 			sc.nextLine();
 
-			System.out.println("Digite uma das seguintes opções:\n" + "Opção 3a: Consultar Vendedor por Nome\n"
-					+ "Opção 3b: Voltar para o menu superior\n");
+			System.out.println("Digite uma das seguintes opções:\n" + "Opção a: Consultar Vendedor por Nome\n"
+					+ "Opção b: Voltar para o menu superior\n");
 
 			String op = sc.nextLine();
 
-			if (op.equals("3a")) {
+			if (op.equalsIgnoreCase("a")) {
 
 				controladorVendedor.buscar();
 				frenteDeLoja();
 
-			} else if (op.equals("3b")) {
+			} else if (op.equalsIgnoreCase("b")) {
 
 				frenteDeLoja();
 
@@ -129,22 +129,22 @@ public class Menu {
 
 			sc.nextLine();
 
-			System.out.println("Digite uma das seguintes opções:\n" + "Opção 4a: Cadastrar Cliente\n"
-					+ "Opção 4b: Consultar Cliente por CPF\n" + "Opção 4c: Voltar para o menu superior\n");
+			System.out.println("Digite uma das seguintes opções:\n" + "Opção a: Cadastrar Cliente\n"
+					+ "Opção b: Consultar Cliente por CPF\n" + "Opção c: Voltar para o menu superior\n");
 
 			String op = sc.nextLine();
 
-			if (op.equals("4a")) {
+			if (op.equalsIgnoreCase("a")) {
 
 				controladorCliente.cadastrar();
 				frenteDeLoja();
 
-			} else if (op.equals("4b")) {
+			} else if (op.equalsIgnoreCase("b")) {
 
 				controladorCliente.buscar();
 				frenteDeLoja();
 
-			} else if (op.equals("4c")) {
+			} else if (op.equalsIgnoreCase("c")) {
 
 				frenteDeLoja();
 
@@ -159,22 +159,22 @@ public class Menu {
 
 			sc.nextLine();
 
-			System.out.println("Digite uma das seguintes opções:\n" + "Opção 5a: Cadastrar venda\n"
-					+ "Opção 5b: Consultar Venda\n" + "Opção 5c: Voltar para o menu superior\n");
+			System.out.println("Digite uma das seguintes opções:\n" + "Opção a: Cadastrar venda\n"
+					+ "Opção b: Consultar Venda\n" + "Opção c: Voltar para o menu superior\n");
 
 			String op = sc.nextLine();
 
-			if (op.equals("5a")) {
+			if (op.equalsIgnoreCase("a")) {
 
 				controladorVenda.cadastrar();
 				frenteDeLoja();
 
-			} else if (op.equals("5b")) {
+			} else if (op.equalsIgnoreCase("b")) {
 
 				controladorVenda.buscar();
 				frenteDeLoja();
 
-			} else if (op.equals("5c")) {
+			} else if (op.equalsIgnoreCase("c")) {
 
 				frenteDeLoja();
 
@@ -212,28 +212,28 @@ public class Menu {
 
 			sc.nextLine();
 
-			System.out.println("Digite uma das seguintes opções:\n" + "Opção 1a: Cadastrar veículo\n"
-					+ "Opção 1b: Excluir veículo\n" + "Opção 1c: Alterar dados do veículo\n"
-					+ "Opção 1d: Voltar para o menu superior\n");
+			System.out.println("Digite uma das seguintes opções:\n" + "Opção a: Cadastrar veículo\n"
+					+ "Opção b: Excluir veículo\n" + "Opção c: Alterar dados do veículo\n"
+					+ "Opção d: Voltar para o menu superior\n");
 
 			String op = sc.nextLine();
 
-			if (op.equals("1a")) {
+			if (op.equalsIgnoreCase("a")) {
 
 				controladorVeiculos.cadastrar();
 				manutencaoNoCadastro();
 
-			} else if (op.equals("1b")) {
+			} else if (op.equalsIgnoreCase("b")) {
 
 				controladorVeiculos.excluir();
 				manutencaoNoCadastro();
 
-			} else if (op.equals("1c")) {
+			} else if (op.equalsIgnoreCase("c")) {
 
 				controladorVeiculos.alterar();
 				manutencaoNoCadastro();
 
-			} else if (op.equals("1d")) {
+			} else if (op.equalsIgnoreCase("d")) {
 
 				manutencaoNoCadastro();
 
@@ -249,27 +249,27 @@ public class Menu {
 			sc.nextLine();
 
 			System.out.println(
-					"Digite uma das seguintes opções:\n" + "Opção 2a: Cadastrar Loja\n" + "Opção 2b: Excluir Loja\n"
-							+ "Opção 2c: Alterar dados da Loja\n" + "Opção 2d: Voltar para o menu superior\n");
+					"Digite uma das seguintes opções:\n" + "Opção a: Cadastrar Loja\n" + "Opção b: Excluir Loja\n"
+							+ "Opção c: Alterar dados da Loja\n" + "Opção d: Voltar para o menu superior\n");
 
 			String op = sc.nextLine();
 
-			if (op.equals("2a")) {
+			if (op.equalsIgnoreCase("a")) {
 
 				controladorLoja.cadastrar();
 				manutencaoNoCadastro();
 
-			} else if (op.equals("2b")) {
+			} else if (op.equalsIgnoreCase("b")) {
 
 				controladorLoja.excluir();
 				manutencaoNoCadastro();
 
-			} else if (op.equals("2c")) {
+			} else if (op.equalsIgnoreCase("c")) {
 
 				controladorLoja.alterar();
 				manutencaoNoCadastro();
 
-			} else if (op.equals("2d")) {
+			} else if (op.equalsIgnoreCase("d")) {
 
 				manutencaoNoCadastro();
 
@@ -284,28 +284,28 @@ public class Menu {
 
 			sc.nextLine();
 
-			System.out.println("Digite uma das seguintes opções:\n" + "Opção 3a: Cadastrar Vendedor\n"
-					+ "Opção 3b: Excluir Vendedor\n" + "Opção 3c: Alterar dados do Vendedor\n"
-					+ "Opção 3d: Voltar para o menu superior\n");
+			System.out.println("Digite uma das seguintes opções:\n" + "Opção a: Cadastrar Vendedor\n"
+					+ "Opção b: Excluir Vendedor\n" + "Opção c: Alterar dados do Vendedor\n"
+					+ "Opção d: Voltar para o menu superior\n");
 
 			String op = sc.nextLine();
 
-			if (op.equals("3a")) {
+			if (op.equalsIgnoreCase("a")) {
 
 				controladorVendedor.cadastrar();
 				manutencaoNoCadastro();
 
-			} else if (op.equals("3b")) {
+			} else if (op.equalsIgnoreCase("b")) {
 
 				controladorVendedor.excluir();
 				manutencaoNoCadastro();
 
-			} else if (op.equals("3c")) {
+			} else if (op.equalsIgnoreCase("c")) {
 
 				controladorVendedor.alterar();
 				manutencaoNoCadastro();
 
-			} else if (op.equals("3d")) {
+			} else if (op.equalsIgnoreCase("d")) {
 
 				manutencaoNoCadastro();
 
@@ -320,28 +320,28 @@ public class Menu {
 
 			sc.nextLine();
 
-			System.out.println("Digite uma das seguintes opções:\n" + "Opção 4a: Cadastrar Cliente\n"
-					+ "Opção 4b: Excluir Cliente\n" + "Opção 4c: Alterar dados do Cliente\n"
-					+ "Opção 4d: Voltar para o menu superior\n");
+			System.out.println("Digite uma das seguintes opções:\n" + "Opção a: Cadastrar Cliente\n"
+					+ "Opção b: Excluir Cliente\n" + "Opção c: Alterar dados do Cliente\n"
+					+ "Opção d: Voltar para o menu superior\n");
 
 			String op = sc.nextLine();
 
-			if (op.equals("4a")) {
+			if (op.equalsIgnoreCase("a")) {
 
 				controladorCliente.cadastrar();
 				manutencaoNoCadastro();
 
-			} else if (op.equals("4b")) {
+			} else if (op.equalsIgnoreCase("b")) {
 
 				controladorCliente.excluir();
 				manutencaoNoCadastro();
 
-			} else if (op.equals("4c")) {
+			} else if (op.equalsIgnoreCase("c")) {
 
 				controladorCliente.alterar();
 				manutencaoNoCadastro();
 
-			} else if (op.equals("4d")) {
+			} else if (op.equalsIgnoreCase("d")) {
 
 				manutencaoNoCadastro();
 
@@ -356,22 +356,22 @@ public class Menu {
 
 			sc.nextLine();
 
-			System.out.println("Digite uma das seguintes opções:\n" + "Opção 5a: Cadastrar Venda\n"
-					+ "Opção 5b: Excluir Venda\n" + "Opção 5c: Voltar para o menu superior\n");
+			System.out.println("Digite uma das seguintes opções:\n" + "Opção a: Cadastrar Venda\n"
+					+ "Opção b: Excluir Venda\n" + "Opção c: Voltar para o menu superior\n");
 
 			String op = sc.nextLine();
 
-			if (op.equals("5a")) {
+			if (op.equals("a")) {
 
 				controladorVenda.cadastrar();
 				manutencaoNoCadastro();
 
-			} else if (op.equals("5b")) {
+			} else if (op.equals("b")) {
 
 				controladorVenda.excluir();
 				manutencaoNoCadastro();
 
-			} else if (op.equals("5c")) {
+			} else if (op.equals("c")) {
 
 				manutencaoNoCadastro();
 

@@ -33,7 +33,7 @@ public class Clientes extends Pessoa {
 				"\nNome:  " + getNome() + 
 				"\nCPF: " + getCpf() + 
 				"\nTelefone: " + getTelefone() + 
-				"] \n";
+				"\n";
 	}
 
 }

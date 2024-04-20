@@ -1,6 +1,6 @@
 package models;
 
-public class Veiculos {
+public abstract class Veiculos {
 
 	private String marca;
 	private String modelo;

@@ -1,7 +1,5 @@
 package models;
 
-import java.text.SimpleDateFormat;
-
 public class Venda {
 
 	private TipoDeVeiculos veiculoVendido;
@@ -76,7 +74,7 @@ public class Venda {
 				"\nVendedor Responsavel: " + getVendedorResponsavel() + 
 				"\nCliente Comprador: " + getClienteComprador() + 
 				"\nData Da Venda: " + getDataDaVenda() + 
-				"]\n";
+				"\n";
 	}
 	
 }
