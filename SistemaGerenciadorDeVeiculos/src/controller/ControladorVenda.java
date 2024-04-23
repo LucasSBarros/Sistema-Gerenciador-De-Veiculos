@@ -33,7 +33,7 @@ public class ControladorVenda {
 		List<Vendedores> vendedores = ControladorVendedor.getVendedor();
 
 		boolean localizado = false;
-		
+
 		TipoDeVeiculos veiculoVendido = null;
 		Vendedores vendedorResponsavel = null;
 		Clientes clienteComprador = null;
@@ -56,12 +56,12 @@ public class ControladorVenda {
 			}
 
 		}
-		
+
 		if (localizado == false) {
 
 			System.out.println("Veículo informado não localizado!\n");
 		}
-		
+
 		localizado = false;
 
 		System.out.println("Digite o nome do vendedor responsável pela venda: ");
@@ -81,12 +81,12 @@ public class ControladorVenda {
 			}
 
 		}
-		
+
 		if (localizado == false) {
 
 			System.out.println("Vendedor informado não localizado!\n");
 		}
-		
+
 		localizado = false;
 
 		System.out.println("Digite o CPF do cliente comprador: ");
@@ -104,7 +104,7 @@ public class ControladorVenda {
 				localizado = true;
 			}
 		}
-		
+
 		if (localizado == false) {
 
 			System.out.println("Cliente informado não localizado!\n");
@@ -118,7 +118,7 @@ public class ControladorVenda {
 				|| !Validadores.validarClienteComprador(clienteComprador)) {
 			System.out.println("Os parâmetros informados não foram localizados, venda não cadastrada!");
 		} else {
-			
+
 			Venda.setContador(Venda.getContador() + 1);
 			vendas.add(new Venda(veiculoVendido, vendedorResponsavel, clienteComprador, dataDaVenda));
 			System.out.println("Cadastramento da venda realizado com sucesso!");
@@ -133,28 +133,28 @@ public class ControladorVenda {
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("Digite o ID da venda que deseja buscar: ");
-		
+
 		while (!sc.hasNextInt()) {
 			System.out.println("ID inválido, tente novamente: ");
-            sc.next(); 
+			sc.next();
 		}
-		
-		int id = sc.nextInt()-1;
+
+		int id = sc.nextInt() - 1;
 
 		while (!validarId(id)) {
 			System.out.println("ID inválido, tente novamente: ");
-			
+
 			while (!sc.hasNextInt()) {
 				System.out.println("ID inválido, tente novamente: ");
-	            sc.next(); 
+				sc.next();
 			}
-			
-			id = sc.nextInt()-1;
+
+			id = sc.nextInt() - 1;
 		}
 
 		for (Venda venda : vendas) {
-			
-			if (venda.getId() == id+1) {
+
+			if (venda.getId() == id + 1) {
 				System.out.println(vendas.toString());
 				localizado = true;
 			}
@@ -173,22 +173,22 @@ public class ControladorVenda {
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("Digite o ID do cliente que deseja excluir: ");
-		
+
 		while (!sc.hasNextInt()) {
 			System.out.println("ID inválido, tente novamente: ");
-            sc.next(); 
+			sc.next();
 		}
-		
+
 		int id = sc.nextInt() - 1;
 
 		while (!validarId(id)) {
 			System.out.println("ID inválido, tente novamente: ");
-			
+
 			while (!sc.hasNextInt()) {
 				System.out.println("ID inválido, tente novamente: ");
-	            sc.next(); 
+				sc.next();
 			}
-			
+
 			id = sc.nextInt() - 1;
 		}
 
